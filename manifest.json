@@ -1,18 +1,23 @@
 {
     "name": "Meanify",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "manifest_version": 2,
+    "description": "Get & Store all the unfamiliar words meaning for best learning.",
     "icons": {
         "16": "./images/icon-16.png",
         "48": "./images/icon-48.png",
-        "128": "./images/icon-128.png"
+        "128": "./images/icon-128.png",
+        "256": "./images/icon-256.png",
+        "512": "./images/icon-512.png"
     },
     "browser_action": {
         "default_popup": "html/popup.html",
         "default_icon": {
             "16": "./images/icon2-16.png",
             "48": "./images/icon2-48.png",
-            "128": "./images/icon2-128.png"
+            "128": "./images/icon2-128.png",
+            "256": "./images/icon2-256.png",
+            "512": "./images/icon2-512.png"
         },
         "default_title": "Meanify"
     },
@@ -30,7 +35,7 @@
             ]
         }
     ],
-    "options_page": "./html/test.html",
+    "options_page": "./html/content.html",
     "permissions": [
         "activeTab",
         "storage",
@@ -38,6 +43,12 @@
         "http://*/*",
         "https://*/*",
         "tabs"
+    ],
+    "web_accessible_resources": [
+        "//ssl.gstatic.com/dictionary/static/sounds/20200429/nutshell--_gb_1.mp3",
+        "tileset/*.json",
+        "layer/*.json",
+        "sound/*.ogg"
     ],
     "content_security_policy": "script-src 'self' 'unsafe-eval' https://cdn.jsdelivr.net https://kit.fontawesome.com;  object-src 'self'"
 }
