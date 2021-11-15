@@ -39,7 +39,7 @@ document.addEventListener('click', function (e) {
     if (e.target.matches('.audioBtn')) {
         chrome.storage.local.get({ meanifyWords: [] }, (result) => {
             let getWordsObj = result.meanifyWords;
-            let getAudio = getWordsObj[e.target.id].audio;
+            let getAudio = "https:" + getWordsObj[e.target.id].audio;
             let sound = new Audio(getAudio);
             sound.play();
         })

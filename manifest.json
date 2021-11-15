@@ -2,22 +2,22 @@
     "name": "Meanify",
     "version": "0.1.0",
     "manifest_version": 2,
-    "description": "Get & Store all the unfamiliar words meaning for best learning.",
+    "description": "View meanings easily as you browse the web and store them for later also.",
     "icons": {
-        "16": "./images/icon-16.png",
-        "48": "./images/icon-48.png",
-        "128": "./images/icon-128.png",
-        "256": "./images/icon-256.png",
-        "512": "./images/icon-512.png"
+        "16": "./images/icon2-1.png",
+        "48": "./images/icon2-2.png",
+        "128": "./images/icon2-3.png",
+        "256": "./images/icon2-4.png",
+        "512": "./images/icon2-5.png"
     },
     "browser_action": {
         "default_popup": "html/popup.html",
         "default_icon": {
-            "16": "./images/icon2-16.png",
-            "48": "./images/icon2-48.png",
-            "128": "./images/icon2-128.png",
-            "256": "./images/icon2-256.png",
-            "512": "./images/icon2-512.png"
+            "16": "./images/icon2-1.png",
+            "48": "./images/icon2-2.png",
+            "128": "./images/icon2-3.png",
+            "256": "./images/icon2-4.png",
+            "512": "./images/icon2-5.png"
         },
         "default_title": "Meanify"
     },

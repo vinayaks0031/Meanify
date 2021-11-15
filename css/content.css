@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn:ital@1&display=swap');
+body{
+    background-color: #191c24 !important;
+    color: white !important;
+}
+.navbar{
+    border-bottom: 1px solid white;
+}
+.navbar-brand{
+    font-family: 'Cinzel Decorative', cursive;
+}
+.your-words{
+    font-family: 'Gentium Book Basic', serif;
+    width: 18%;
+}
+hr{
+    color: white;
+}
+.words-container{
+    color: black;
+    background-color: rgb(255, 254, 254);
+    border-radius: 25px;
+    padding: 1px 30px;
+    box-shadow: rgba(63, 102, 146, 0.4) 0px 0px 0px 2px, rgba(29, 60, 95, 0.65) 0px 4px 6px -1px, rgba(104, 77, 77, 0.08) 0px 1px 0px inset;
+    margin-bottom: 2%;
+}
+.index{
+    font-size: 90px;
+    font-family: 'Vollkorn', serif;
+    width: 7%;
+}
+.main-content{
+    width: 80%;
+    font-size: 18px;
+}
+.main-content > p{
+    margin-bottom: 0%;
+}
+.b-text {
+    font-weight: bold;
+}
+.m-word{
+    margin: 3px 0px;
+    border-bottom: 1px solid black  ;
+    margin-bottom: 10px !important;
+}
+.m-word >span{
+    color: rgb(23, 64, 199);
+    font-size: 25px;
+}
+.icons{  
+    width: 13%;
+    text-align: center;
+    padding-top:55px;
+}
+.fas{
+    margin-right: 8%;
+    color:rgb(23, 64, 199) ;
+    cursor: pointer;
+}
+.synonyms{
+    border-bottom:2px solid rgb(23, 64, 199);
+    border-radius: 20px;
+    padding: 0px 6px;
+    margin-right: 10px;
+}
+
+
