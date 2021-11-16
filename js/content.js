@@ -1,8 +1,8 @@
 showItems();
 
 function showItems() {
-    chrome.storage.local.get({ meanifyWords: [] }, (result) => {
-        let html = "";
+    chrome.storage.local.get({ meanifyWords: [] }, (result) => { //taking data from chromeStorage
+        let html = "";   
         let getWordsObj = result.meanifyWords;
         getWordsObj.forEach((element, index) => {
             html += `<div id="wordContainer">
@@ -30,7 +30,7 @@ function showItems() {
         } else {
             wordBox.innerHTML = `<p>Nothing to show! Please Add some words first.</p>`;
         }
-    })
+    });
 }
 
 // function to play sounds
@@ -42,7 +42,7 @@ document.addEventListener('click', function (e) {
             let getAudio = "https:" + getWordsObj[e.target.id].audio;
             let sound = new Audio(getAudio);
             sound.play();
-        })
+        });
     }
 });
 
@@ -55,7 +55,7 @@ document.addEventListener('click', function (e) {
             getWordsObj.splice(e.target.id, 1);
             chrome.storage.local.set({ meanifyWords: getWordsObj });
             showItems();
-        })
+        });
     }
 });
 
@@ -73,4 +73,4 @@ search.addEventListener("input", () => {
             element.style.display = "none";
         }
     });
-})
+});
