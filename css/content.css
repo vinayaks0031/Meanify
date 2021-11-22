@@ -66,3 +66,7 @@ hr{
     padding: 0px 6px;
     margin-right: 10px;
 }
+.reload-note{
+    font-family: 'Gentium Book Basic', serif;
+    color: rgb(110, 100, 100);
+}
