@@ -8,6 +8,8 @@ The extension is available at the chrome web store ([Meanify]()). Please make su
 
 ## How to use
 
+![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/76878117/142830518-ac842037-e5c4-481e-8f74-1946e1ee2027.gif)
+
 It's very easy to use. You just have to add or load this extension in your browser and pin it 📌
 
 Open any website select the word and press right click after that click "Meanify" like this :
@@ -15,8 +17,6 @@ Open any website select the word and press right click after that click "Meanify
 To see all stored words, Click on extension icon which is in right side of address bar you'll see the popup then click on "YOUR WORDS".
 
 It'll take you to another page where you can see all your data📕.
-
-![ezgif com-gif-maker (1)](https://user-images.githubusercontent.com/76878117/142830518-ac842037-e5c4-481e-8f74-1946e1ee2027.gif)
 
 ## Feature
 
