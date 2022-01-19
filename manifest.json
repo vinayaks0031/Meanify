@@ -1,6 +1,6 @@
 {
     "name": "Meanify - Dictionary",
-    "version": "0.1.0",
+    "version": "0.1.2",
     "manifest_version": 2,
     "description": "View meanings easily as you browse the web and store them for later also.",
     "icons": {
@@ -37,12 +37,8 @@
     ],
     "options_page": "./html/content.html",
     "permissions": [
-        "activeTab",
         "storage",
-        "contextMenus",
-        "http://*/*",
-        "https://*/*",
-        "tabs"
+        "contextMenus"
     ],
     "web_accessible_resources": [
         "*.mp3",
