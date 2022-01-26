@@ -1,8 +1,10 @@
 var data;
 chrome.runtime.onMessage.addListener((msg, sender, response) => { //receiving data from myscript
 	data = msg.word;
+
 	response({ text: "got the response" }); //sending some response to myscript
 });
+
 
 chrome.contextMenus.removeAll(function () {
 	chrome.contextMenus.create({ //declaring the use of right click
@@ -17,16 +19,28 @@ chrome.contextMenus.onClicked.addListener(function () {
 		let newData = data.trim();
 		var spaceCount = (newData.split(" ").length - 1);
 		if (spaceCount != 0) {
-			alert("invalid selection! Try again");
+			chrome.tabs.query({ active: true, windowType: "normal", currentWindow: true }, function (d) {
+				chrome.scripting.executeScript({
+					target: { tabId: d[0].id },
+					func: showAlert,
+					args: ["invalid selection! Try again"]
+				});
+			})
 		}
 		else {
 			let a = getData(newData);
 			a.then((data) => {
 				if (data.message != undefined) { //giving massage =>word is not in dictionary 
-                    alert(data.message);
+					chrome.tabs.query({ active: true, windowType: "normal", currentWindow: true }, function (d) {
+						chrome.scripting.executeScript({
+							target: { tabId: d[0].id },
+							func: showAlert,
+							args: [data.message]
+						});
+					})
 					return; //exits the function 
 				}
-				const { word, phonetic } = data[0]; 
+				const { word, phonetic } = data[0];
 				const { definition, example, synonyms } = data[0].meanings[0].definitions[0];
 				if (data[0].phonetics[0] == undefined) {
 					var wordObj = {
@@ -50,24 +64,42 @@ chrome.contextMenus.onClicked.addListener(function () {
 				//Adding new object in chrome storagelocal
 				chrome.storage.local.get({ meanifyWords: [] }, (result) => {
 					let meanifyWords = result.meanifyWords;
-					let isPresent=false;
+					let isPresent = false;
 					//checking the word is already present in disc or not
 					for (let index = 0; index < meanifyWords.length; index++) {
-						if(meanifyWords[index].word.includes(wordObj.word)) isPresent=true;
+						if (meanifyWords[index].word.includes(wordObj.word)) isPresent = true;
 					}
-					if(!isPresent){ //if not present then push
-					meanifyWords.push(wordObj);
-					chrome.storage.local.set({ meanifyWords: meanifyWords });
+					if (!isPresent) { //if not present then push
+						meanifyWords.push(wordObj);
+						chrome.storage.local.set({ meanifyWords: meanifyWords });
 					}
 				});
-				alert(wordObj.definition);
+
+				chrome.tabs.query({ active: true, windowType: "normal", currentWindow: true }, function (d) {
+					chrome.scripting.executeScript({
+						target: { tabId: d[0].id },
+						func: showAlert,
+						args: [wordObj.definition]
+					});
+				})
+	
 			});
 		}
-	} 
+	}
 	else {
-		alert("invalid selection! Try again");
+		chrome.tabs.query({ active: true, windowType: "normal", currentWindow: true }, function (d) {
+			chrome.scripting.executeScript({
+				target: { tabId: d[0].id },
+				func: showAlert,
+				args: ["invalid selection! Try again"]
+			});
+		})
+	}
+	function showAlert(meaning) {
+		alert(meaning);
 	}
 });
+
 
 async function getData(word) { //calling the api for word
 	const response = await fetch(`https://api.dictionaryapi.dev/api/v2/entries/en/${word}`);
