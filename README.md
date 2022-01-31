@@ -4,7 +4,7 @@ Meanify is a chrome extension that helps you to get meanings of unfamiliar words
 
 ## Add extension in your chrome
 
-The extension is available at the chrome webStore ([Meanify](https://chrome.google.com/webstore/detail/meanify-dictionary/eacnimghnciloibpcfagciaagmpmkdco)) and Edge AddOns ([Meanify](https://microsoftedge.microsoft.com/addons/detail/meanify/dljdcindnbidjlkapliihhdigmgbbomo?hl=en-US)). Please make sure to add the extension in your browser it'll help you alot😃.
+The extension is available at the chrome webStore ([Click here](https://chrome.google.com/webstore/detail/meanify-dictionary/eacnimghnciloibpcfagciaagmpmkdco)) and Edge AddOns ([Click here](https://microsoftedge.microsoft.com/addons/detail/meanify/dljdcindnbidjlkapliihhdigmgbbomo?hl=en-US)). Please make sure to add the extension in your browser it'll help you alot😃.
 
 ## How to use
 
