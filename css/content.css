@@ -18,6 +18,8 @@ body{
 hr{
     color: white;
 }
+
+
 .words-container{
     color: black;
     background-color: rgb(255, 254, 254);
@@ -26,15 +28,21 @@ hr{
     box-shadow: rgba(63, 102, 146, 0.4) 0px 0px 0px 2px, rgba(29, 60, 95, 0.65) 0px 4px 6px -1px, rgba(104, 77, 77, 0.08) 0px 1px 0px inset;
     margin-bottom: 2%;
 }
+
+
 .index{
     font-size: 90px;
     font-family: 'Vollkorn', serif;
-    width: 7%;
+    width: 9%;
 }
+
+
 .main-content{
     width: 80%;
     font-size: 18px;
 }
+
+
 .main-content > p{
     margin-bottom: 0%;
 }
