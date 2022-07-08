@@ -18,7 +18,7 @@ function showItems() {
             <p><i>synonyms: ${element.synonyms[0] == undefined ? "" : element.synonyms[0] + ","} ${element.synonyms[1] == undefined ? "" : element.synonyms[1] + ","} ${element.synonyms[2] == undefined ? "" : element.synonyms[2] + ","} ${element.synonyms[3] == undefined ? "" : element.synonyms[3] + ","} ${element.synonyms[4] == undefined ? "" : element.synonyms[4]}</i></p>
         </div>
         <div class="icons">
-            <i class="fas ${element.audio != undefined ? "fa-volume-up" : "fa-microphone-slash"} fa-2x audioBtn" id="${index}" ></i>
+            <i class="fas ${element.audio != undefined && element.audio.length != 0  ? "fa-volume-up" : "fa-microphone-slash"} fa-2x audioBtn" id="${index}" ></i>
             <i class="fas fa-trash fa-2x deleteBtn" id="${index}" ></i>
         </div>
     </div>
